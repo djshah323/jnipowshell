@@ -20,11 +20,11 @@ public class PSUtil {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void execute(String user, String password, String domain, String commandlet) {
 		// TODO Auto-generated method stub
 		PSUtil newUtil = new PSUtil();
-		newUtil.init("azure.onmicrosoft.com", "user", "password");
-		String ret = newUtil.invoke("azure.onmicrosoft.com", "Get-AcceptedDomain");
+		newUtil.init(domain, user, password);
+		String ret = newUtil.invoke(domain, commandlet);
 		System.out.println(ret);
 	}
 
